@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Environment Template Stack
+
+Parameters:
+  BucketName1:
+    Type: String
+    Description: Name of Bucket
+    Default: toanla123-env1
+  BucketName2:
+    Type: String
+    Description: Name of Bucket
+    Default: toanla123-env2
+
+Resources:
+  BucketName1Resource:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: s3/s3.yaml
+      Parameters:
+        BucketName: !Ref 'BucketName1'
+  
+  BucketName2Resource:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: s3/s3.yaml
+      Parameters:
+        BucketName: !Ref 'BucketName2'
