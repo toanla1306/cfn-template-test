@@ -13,15 +13,11 @@ Parameters:
 
 Resources:
   BucketName1Resource:
-    Type: AWS::CloudFormation::Stack
+    Type: 'AWS::S3::Bucket'
     Properties:
-      TemplateURL: s3/s3.yaml
-      Parameters:
-        BucketName: !Ref 'BucketName1'
+      BucketName: !Ref 'BucketName1'
   
   BucketName2Resource:
-    Type: AWS::CloudFormation::Stack
+    Type: 'AWS::S3::Bucket'
     Properties:
-      TemplateURL: s3/s3.yaml
-      Parameters:
-        BucketName: !Ref 'BucketName2'
+      BucketName: !Ref 'BucketName2'
