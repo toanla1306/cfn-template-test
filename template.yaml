@@ -1,0 +1,8 @@
+template-file-path: cloudformation.yaml
+
+parameters: 
+  BucketName1: toanla123-env3
+  BucketName2: toanla123-env4
+tags:
+  cost-center: '123456'
+  org: 'AWS'
